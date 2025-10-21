@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCTIQ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+<script>
+  window.addEventListener('scroll', () => {
+    const yOffset = window.scrollY * 0.2;
+    document.body.style.backgroundPosition = `center ${yOffset}px`;
+  });
+</script>
+  <header>
+  <div class="nav-container">
+    <a href="index.html"><img src="logoclear.png" alt="ARCTIQ Logo" class="logo"></a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
+  </div>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to ARCTIQ</h2>
+    <p>Building, hosting, and experimenting with modern tech. A home for innovation, performance, and play.</p>
+    <a href="projects.html" class="btn">Explore</a>
+  </section>
+
+  <section>
+    <h3 class="section-title">Our Focus</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Game Servers</h4>
+        <p>Hosting dedicated environments for friends, projects, and community fun.</p>
+      </div>
+      <div class="card">
+        <h4>Home Lab</h4>
+        <p>Experimenting with infrastructure, networking, and cutting-edge tech from home.</p>
+      </div>
+      <div class="card">
+        <h4>Cloud & Email</h4>
+        <p>Running VPS, mail, and web services to explore full-stack deployment.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 ARCTIQ. All rights reserved.
+  </footer>
+</body>
+</html>
