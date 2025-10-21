@@ -169,6 +169,10 @@
     }
 
     .nav-links {
+        opacity: 0;
+        transform: translateY(-5px);
+        animation: fadeInNav 1.2s ease forwards;
+        animation-delay: 1s;
         display: flex;
         gap: 2rem;
     }
@@ -235,6 +239,18 @@
         width: 100%;
     }
 
+    .menu-toggle {
+        display: none;
+        font-size: 1.8rem;
+        color: #6FC9FF;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .menu-toggle:hover {
+        color: #9fdcff;
+    }
+
     @media (max-width: 768px) {
         header {
             height: 90px;
@@ -250,6 +266,36 @@
         }
         .hero p {
             font-size: 1rem;
+        }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #0A0F1F;
+            width: 100%;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 1rem 0;
+        }
+        .nav-links a {
+            display: block;
+            padding: 0.75rem 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .nav-container {
+            justify-content: space-between;
+        }
+
+        .nav-links.active {
+            display: flex;
         }
     }
 
@@ -313,6 +359,17 @@
         0% {
             opacity: 0;
             transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInNav {
+        0% {
+            opacity: 0;
+            transform: translateY(-5px);
         }
         100% {
             opacity: 1;

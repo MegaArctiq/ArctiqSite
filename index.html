@@ -8,6 +8,15 @@
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 <body>
 <script>
   window.addEventListener('scroll', () => {
@@ -18,11 +27,14 @@
   <header>
   <div class="nav-container">
     <a href="index.html"><img src="logoclear.png" alt="ARCTIQ Logo" class="logo"></a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
         <a href="#">Contact</a>
     </nav>
+    <div class="menu-toggle" id="menuToggle">
+    &#9776;
+    </div>
   </div>
   </header>
 
