@@ -240,17 +240,16 @@
     }
 
     .menu-toggle {
-        display: none;
-        font-size: 1.8rem;
-        color: #6FC9FF;
-        cursor: pointer;
-        transition: color 0.3s ease;
-        z-index: 20;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 28px;
-        height: 24px
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 9999; /* keep it above logo */
+        width: 32px;
+        height: 26px;
+        position: relative;
     }
 
     .menu-toggle span {
@@ -258,8 +257,10 @@
         height: 3px;
         width: 100%;
         border-radius: 2px;
-        margin: 3px 0;
+        margin: 4px 0;
         transition: all 0.3s ease;
+        display: block;
+        opacity: 1;
     }
 
     .menu-toggle.open span:nth-child(1) {
@@ -326,6 +327,14 @@
         .nav-links.active {
             display: flex;
             animation: slideDown 0.3s ease forwards;
+            backdrop-filter: blur(8px);
+            background-color: rgba(10, 15, 31, 0.8);
+        }
+    }
+
+    @media (min-width: 769px) {
+        .menu-toggle {
+            display: none;
         }
     }
 
